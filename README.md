@@ -2,7 +2,12 @@
 
 GamingCoach is an intelligent League of Legends coaching application that leverages the power of Google Gemini AI to analyze your recent matches and provide actionable, data-driven advice to help you climb the ladder.
 
-![GamingCoach UI Mockup](https://via.placeholder.com/800x450?text=GamingCoach+UI+Dashboard) *(Replace with actual screenshot after deployment)*
+<img width="1803" height="937" alt="image" src="https://github.com/user-attachments/assets/ba9d74d1-5843-4acd-9a95-91a7421ae222" />
+<img width="1701" height="928" alt="image" src="https://github.com/user-attachments/assets/b06b2e41-ef1f-4038-9142-54552247e8ff" />
+<img width="1454" height="943" alt="image" src="https://github.com/user-attachments/assets/88c9cd12-3171-46cc-b823-bfc1883baa02" />
+
+
+
 
 ---
 
