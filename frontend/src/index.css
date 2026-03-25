@@ -1,0 +1,200 @@
+:root {
+  --accent-cyan: #06b6d4;
+  --accent-blue: #2563eb;
+  --accent-purple: #9333ea;
+  --accent-pink: #ec4899;
+}
+
+[data-bs-theme="dark"] {
+  --app-bg: #09090b;
+  --card-bg: #18181b;
+  --text-primary: #f4f4f5;
+  --text-muted: #a1a1aa;
+  --input-bg: rgba(0, 0, 0, 0.4);
+  --input-border: rgba(255, 255, 255, 0.2);
+  --match-item-bg: rgba(0, 0, 0, 0.2);
+  --match-item-hover: rgba(255, 255, 255, 0.15);
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --shadow-strong: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --card-shadow: 0 0 40px rgba(0,0,0,0.5);
+}
+
+[data-bs-theme="light"] {
+  --app-bg: #f3f4f6;
+  --card-bg: #ffffff;
+  --text-primary: #1f2937;
+  --text-muted: #6b7280;
+  --input-bg: #f9fafb;
+  --input-border: #d1d5db;
+  --match-item-bg: #ffffff;
+  --match-item-hover: #f3f4f6;
+  --border-subtle: #e5e7eb;
+  --shadow-strong: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --card-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+body {
+  background-color: var(--app-bg) !important;
+  color: var(--text-primary) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Typography & Gradients */
+.text-gradient-cyan-blue {
+  background: linear-gradient(to right, var(--accent-cyan), var(--accent-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-purple-pink {
+  background: linear-gradient(to right, var(--accent-purple), var(--accent-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Components to maintain gamer aesthetic with Bootstrap */
+.gamer-card {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 1rem !important;
+  box-shadow: var(--shadow-strong) !important;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.gamer-input {
+  background-color: var(--input-bg) !important;
+  border: 1px solid var(--input-border) !important;
+  color: var(--text-primary) !important;
+  border-radius: 0.75rem !important;
+  transition: all 0.3s ease;
+}
+
+.gamer-input:focus {
+  border-color: var(--accent-cyan) !important;
+  box-shadow: 0 0 0 0.25rem rgba(6, 182, 212, 0.25) !important;
+}
+
+.gamer-input option {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+.gamer-input::placeholder {
+  color: var(--text-muted) !important;
+  opacity: 0.7 !important;
+}
+
+.form-label.text-muted {
+  color: var(--text-muted) !important;
+  font-weight: 600 !important;
+}
+
+/* Buttons */
+.gamer-btn-cyan {
+  background: linear-gradient(to right, var(--accent-cyan), var(--accent-blue)) !important;
+  border: none !important;
+  color: white !important;
+  border-radius: 0.75rem !important;
+  font-weight: bold !important;
+  transition: all 0.2s ease-in-out !important;
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.3) !important;
+}
+
+.gamer-btn-cyan:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.5) !important;
+}
+
+.gamer-btn-cyan:disabled {
+  opacity: 0.7;
+  transform: none;
+  cursor: not-allowed;
+}
+
+.gamer-btn-purple {
+  background: linear-gradient(to right, var(--accent-purple), var(--accent-pink)) !important;
+  border: none !important;
+  color: white !important;
+  border-radius: 0.75rem !important;
+  font-weight: bold !important;
+  transition: all 0.2s ease-in-out !important;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.3) !important;
+}
+
+.gamer-btn-purple:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.5) !important;
+}
+
+/* Match row items */
+.match-item {
+  background-color: var(--match-item-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.75rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.75rem;
+  transition: all 0.2s;
+}
+
+.match-item:hover {
+  border-color: var(--match-item-hover);
+  transform: scale(1.02);
+}
+
+.indicator {
+  width: 6px;
+  height: 40px;
+  border-radius: 3px;
+  margin-right: 15px;
+}
+
+.indicator-win { background-color: #10b981; box-shadow: 0 0 10px rgba(16, 185, 129, 0.4); }
+.indicator-loss { background-color: #f43f5e; box-shadow: 0 0 10px rgba(244, 63, 94, 0.4); }
+
+.text-win { color: #10b981 !important; font-weight: bold; }
+.text-loss { color: #f43f5e !important; font-weight: bold; }
+
+/* Markdown */
+.coaching-markdown {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  box-shadow: var(--card-shadow);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.coaching-markdown h1, .coaching-markdown h2, .coaching-markdown h3 {
+  color: var(--text-primary);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.coaching-markdown strong {
+  color: var(--accent-cyan);
+}
+
+.coaching-markdown ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
